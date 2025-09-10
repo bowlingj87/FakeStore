@@ -36,6 +36,14 @@ function AddProduct() {
             setProduct(response.data);
             setSubmitted(true);
             setError(null);
+
+             setFormData({
+            title: '',
+            description: '',
+            category: '',
+            price: '',
+            image: '',
+        });
         } catch (error) {
             setError(`Error submitting form. Please try again: ${error.message}`);
             setSubmitted(false);
@@ -72,12 +80,14 @@ function AddProduct() {
             {/* Price */}
             <Form.Group className="mb-3">
                 <Form.Label>Price</Form.Label>
-                <Form.Control type="text" placeholder="Enter a price" name="price" value={formData.price} onChange={handleChange} required />
+                <Form.Control type="number" placeholder="Enter a price" name="price" value={formData.price} onChange={handleChange} required />
             </Form.Group>
 
             <Button variant="primary" type="submit">Submit</Button>
             
             </Form>
+
+            
             </Container>
         
     )

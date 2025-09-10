@@ -13,9 +13,9 @@ import EditProduct from './components/EditProduct'
 function App() {
  
   return (
-    <>
+    <Router>  
       <NavigationBar/>
-      <Router>  
+      {/* Define routes for different pages */}
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/products" element={<ProductList/>}/>
@@ -24,9 +24,7 @@ function App() {
           <Route path="/editproduct/:id" element={<EditProduct />} />
         </Routes>
       </Router>
-      
-    </>
-  )
+    );
 }
 
 export default App

@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; {/* Import necessary components from React Bootstrap and React Router */}
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
       <h1>Welcome to Our Store</h1>
       <p className="mt-3">Explore our exclusive collection of products all from the comfort of your home. Browse, shop, and enjoy seamless online shopping experience!
         
-      </p>
+      </p> {/* Button to navigate to products page */}
       <Link to="/products">
         <Button className="mt-4" variant="primary" >
           View Products
